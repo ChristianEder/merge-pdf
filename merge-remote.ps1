@@ -6,7 +6,7 @@ git clone https://github.com/ChristianEder/merge-pdf.git
 
 Set-Location merge-pdf
 
-.merge-pdf $args
+.\merge.ps1 $args
 
 Set-Location ..
 Set-Location ..
