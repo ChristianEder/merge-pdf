@@ -1,1 +1,1 @@
-Write-Host "Hello world"
+dotnet run --project .\MergePDF -- $args
