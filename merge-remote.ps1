@@ -1,14 +1,14 @@
 $tempFolder = New-Guid
-New-Item $tempFolder.ToString() -ItemType Directory
-Set-Location $tempFolder.ToString()
+$ignore = New-Item $tempFolder.ToString() -ItemType Directory
+$ignore = Set-Location $tempFolder.ToString()
 
-git clone https://github.com/ChristianEder/merge-pdf.git
+$ignore = git clone https://github.com/ChristianEder/merge-pdf.git -q
 
-Set-Location merge-pdf
+$ignore = Set-Location merge-pdf
 
 .\merge.ps1 "..\.." "..\..\out.pdf" 
 
-Set-Location ..
-Set-Location ..
+$ignore = Set-Location ..
+$ignore = Set-Location ..
 
-Remove-Item $tempFolder.ToString() -Recurse -Force
+$ignore = Remove-Item $tempFolder.ToString() -Recurse -Force
