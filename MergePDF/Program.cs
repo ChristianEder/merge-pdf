@@ -22,7 +22,7 @@ namespace MergePDF
                         continue;
                     }
 
-                    using (PdfDocument pdf = PdfReader.Open("file1.pdf", PdfDocumentOpenMode.Import))
+                    using (PdfDocument pdf = PdfReader.Open(file, PdfDocumentOpenMode.Import))
                     {
                         Console.WriteLine("Merging " + file);
                         CopyPages(pdf, output);
