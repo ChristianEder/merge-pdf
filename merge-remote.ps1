@@ -11,4 +11,4 @@ Set-Location merge-pdf
 Set-Location ..
 Set-Location ..
 
-Remove-Item $tempFolder.ToString()
+Remove-Item $tempFolder.ToString() -Recurse -Force
