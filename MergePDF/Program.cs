@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Text;
 using PdfSharp.Pdf;
 using PdfSharp.Pdf.IO;
 
@@ -10,6 +11,7 @@ namespace MergePDF
     {
         static void Main(string[] args)
         {
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             var targetFile = new FileInfo(Path.Combine(Directory.GetCurrentDirectory(), args[1]));
 
             var folder = Path.Combine(Directory.GetCurrentDirectory(), args[0]);
